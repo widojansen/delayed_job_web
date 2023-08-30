@@ -59,6 +59,11 @@
       <td>
       <%= count %>
       </td>
+      <td>
+        <% if queue == 'axapta' %>
+          <button>Clear</button>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>
