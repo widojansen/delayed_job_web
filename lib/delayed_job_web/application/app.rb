@@ -204,7 +204,7 @@ class DelayedJobWeb < Sinatra::Base
 
   def poll
     if @polling
-      text = "Last Updated: #{Time.now.strftime("%H:%M:%S")}"
+      text = "Last Updated: #{Time.now.in_time_zone('Amsterdam/Europe').strftime("%H:%M:%S")} CET"
     else
       text = "<a href='#{u(request.path_info + ".poll")}' rel='poll'>Live Poll</a>"
     end
