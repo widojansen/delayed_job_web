@@ -162,7 +162,7 @@ class DelayedJobWeb < Sinatra::Base
   end
 
   get "/clear_axapta_queue" do
-    delayed_jobs(queue: :axapta).delete_all
+    delayed_jobs(:all, [:axapta]).delete_all
     redirect u(:overview)
   end
 
