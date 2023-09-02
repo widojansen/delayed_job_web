@@ -61,7 +61,10 @@
       </td>
       <td>
         <% if queue == 'axapta' %>
-          <button>Clear</button>
+<!--          <button>Clear</button>-->
+          <form>
+            <button type="submit" formaction="/clear_axapta_queue">Clear Axapta Queue</button>
+          </form>
         <% end %>
       </td>
     </tr>

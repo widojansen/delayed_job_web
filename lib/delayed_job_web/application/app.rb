@@ -161,6 +161,11 @@ class DelayedJobWeb < Sinatra::Base
     redirect u('failed')
   end
 
+  get "/clear_axapta_queue" do
+    delayed_jobs.where("queue = 'axapta'").delete_all
+    redirect u(:overview)
+  end
+
   def delayed_jobs(type, queues = [])
     rel = delayed_job
 
