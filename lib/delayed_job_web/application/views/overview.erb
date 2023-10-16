@@ -60,12 +60,11 @@
       <%= count %>
       </td>
       <td>
-        <% if queue == 'axapta' %>
-<!--          <button>Clear</button>-->
+        <%# if queue == 'axapta' %>
           <form>
-            <button type="submit" formaction="/delayed_job/clear_axapta_queue">Clear Axapta Queue</button>
+            <button type="submit" formaction=<%= "/delayed_job/clear_queue/#{queue}"%>>Clear</button>
           </form>
-        <% end %>
+        <%# end %>
       </td>
     </tr>
   <% end %>

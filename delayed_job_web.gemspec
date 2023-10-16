@@ -1,8 +1,10 @@
+# run gem build delayed_job_web.gemspec before push and deployment
+
 Gem::Specification.new do |gem|
   gem.name        = "delayed_job_web"
-  gem.version     = "1.4.4"
-  gem.author      = "Erick Schmitt"
-  gem.email       = "ejschmitt@gmail.com"
+  gem.version     = "1.4.5"
+  gem.author      = "Erick Schmitt, mods Wido Jansen"
+  gem.email       = ["ejschmitt@gmail.com", "widojansen@gmail.com"]
   gem.homepage    = "https://github.com/ejschmitt/delayed_job_web"
   gem.summary     = "Web interface for delayed_job inspired by resque"
   gem.description = gem.summary
