@@ -162,9 +162,8 @@ class DelayedJobWeb < Sinatra::Base
   end
 
   get "/clear_queue/:queue" do
-    queue = delayed_job.find(params[:queue]).to_sym
-    puts "Clearing queue #{queue} at #{Time.now}"
-    delayed_jobs(:all, [queue]).delete_all
+    puts "Clearing queue #{params[:queue]} at #{Time.now}"
+    delayed_jobs(:all, [params[:queue]).delete_all
     redirect u(:overview)
   end
 
