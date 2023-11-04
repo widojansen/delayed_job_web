@@ -163,7 +163,7 @@ class DelayedJobWeb < Sinatra::Base
 
   get "/clear_queue/:queue" do
     puts "Clearing queue #{params[:queue]} at #{Time.now}"
-    delayed_jobs(:all, [params[:queue]).delete_all
+    delayed_jobs(:all, [params[:queue]]).delete_all
     redirect u(:overview)
   end
 
